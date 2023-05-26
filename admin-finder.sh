@@ -36,7 +36,7 @@ Usage:
 Options:
     -h, --help              Show this help message and exit
     -u, --url <url>         Target url (e.g. 'www.example.com' or 'example.com')
-    -t, --thread <thread>   Set threads number (default: 100)
+    -t, --thread <thread>   Set thread number (default: 100)
     -w, --wordlist <file>   Use custom wordlist
 
 "
