@@ -6,4 +6,4 @@
 ![Github stars](https://img.shields.io/github/stars/kangnglk/adminFinder?style=social)
 
 
-<p align=left>COMING SOON</p>
+<p align=left>COMING SOON readme.md</p>
