@@ -55,7 +55,7 @@
 - [x] Web crawling
 - [x] Auto scanning robots.txt
 - [x] Checking potential EAR vulnerability
-- [x] Launch multiple proccess on demand (bash threads)
+- [x] Launch multiple proccess java on demand (bash threading version)
 
 ### Download
 COMING SOON LMAO.
