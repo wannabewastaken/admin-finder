@@ -22,9 +22,12 @@ command -v curl &> /dev/null || { printf "%b\n" \
 command -v cut &> /dev/null || { printf "%b\n" \
      "${red}cut ${reset}not installed."; exit 1; }
 
+# Trap ctrl+c
+trap "printf '\e[K\r[${red}EXIT${reset}] ctrl+c detected\n\n'; exit" INT
+
 banner() { printf "%b" "\
 ${orange}▄▀█  ${reset}admin-finder
-${orange}█▀█  ${reset}132405a (${green}latest${reset})\n\n"
+${orange}█▀█  ${reset}version (${orange}v1.1${reset})\n\n"
 }
 
 usage() { printf "%s" "\
@@ -84,7 +87,7 @@ scan_path() {
         "\e[J |-- (${green}200${reset}) -> ${1}${2}/${3}\n"
     else
         printf "%b" \
-        "\e[K |-- (${orange}checking${reset}) -> ${1}${2}/${3}${reset}\r"
+        "\e[K |-- (${yellow}${4}${reset}) -> ${1}${2}/${3}${reset}\r"
     fi
 }
 
@@ -148,7 +151,7 @@ main() {
 
     while read -r path; do
         ((x=x%${thread})); ((x++==0)) && wait
-            scan_path ${protocol} ${url} ${path} &
+            scan_path ${protocol} ${url} ${path} ${x} &
     done < <(grep "" ${wordlist})
     wait
 
