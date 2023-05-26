@@ -5,4 +5,5 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/kangnglk/adminFinder?color=4F5AD9)
 ![Github stars](https://img.shields.io/github/stars/kangnglk/adminFinder?style=social)
 
-<center>COMING SOON<center>
+
+<p align=left>COMING SOON</p>
