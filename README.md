@@ -5,21 +5,4 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/kangnglk/adminFinder?color=4F5AD9)
 ![Github stars](https://img.shields.io/github/stars/kangnglk/adminFinder?style=social)
 
-#### Features
-- [x] Web Crawling
-- [x] Support Custom Path
-- [x] Check for potential EAR vulnerability
-- [ ] Check for robots.txt
-- [ ] Multithreading
-
-#### Cloning this project
-```bash
-> git clone https://github.com/kangnglk/adminFinder
-```
-
-#### Usage
-Before running the below command, make sure you're in the the project directory that you've just cloned.
-```bash
-> chmod +x *
-> ./main.sh <url>
-```
+<center>COMING SOON<center>
