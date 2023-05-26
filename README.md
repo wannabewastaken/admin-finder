@@ -1,5 +1,5 @@
 <h3 align=center>
-    admin-finder
+    	admin-finder
 </h3>
 
 <h6 align=center>
@@ -9,6 +9,10 @@
     ·
     <a href="https://github.com/wannabewastaken/admin-finder#download">Download</a>
 </h6>
+
+<p align=center>
+	A script used to find the admin login page of a website
+</p>
 
 <p align=center>
     <a href="https://github.com/wannabewastaken/admin-finder/">
