@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 #
 # admin-finder: A script used to find the admin login page of a website.
 # https://github.com/wannabewastaken/admin-finder
