@@ -10,10 +10,8 @@ LC_ALL=C
 LANG=C
 
 # Color definition
-: "${orange:=\e[38;5;202m}"
+: "${aqua:=\e[38;5;023m}"
 : "${red:=\e[38;5;160m}"
-: "${yellow:=\e[38;5;220m}"
-: "${green:=\e[38;5;40m}"
 : "${reset:=\e[m}"
 
 # Checking dependecies
@@ -25,11 +23,11 @@ command -v cut &> /dev/null || { printf "%b\n" \
 # Trap (ctrl + c)
 # \e[K   Erase from cursor position to end of line.
 # \r     is a carriage return which often means that the cursor should move to the leftmost column.
-trap "printf '\e[K\r[${red}EXIT${reset}] ctrl+c detected\n\n'; exit" INT
+trap "printf '\e[K\r[$(date +%H:%M:%S)] ctrl+c detected, exit\n\n'; exit" INT
 
 banner() { printf "%b" "\
-${orange}▄▀█  ${reset}admin-finder
-${orange}█▀█  ${reset}version (${orange}v1.1${reset})\n\n"
+${aqua}▄▀█  ${reset}admin-finder
+${aqua}█▀█  ${reset}version (${aqua}v${version}${reset})\n\n"
 }
 
 usage() { printf "%s" "\
@@ -86,10 +84,10 @@ scan_robots() {
 scan_path() {
     if [[ $(curl -s "${1}${2}/${3}" -w "%{http_code}" -o /dev/null) -eq 200 ]]; then
         printf "%b" \
-        "\e[K |-- (${green}200${reset}) -> ${1}${2}/${3}\n"
+        "\e[K |-- (200) -> ${1}${2}/${3}\n"
     else
         printf "%b" \
-        "\e[K |-- (${yellow}${4}${reset}) -> ${1}${2}/${3}${reset}\r"
+        "\e[K |-- (${aqua}#${reset}) -> ${1}${2}/${3}${reset}\r"
     fi
 }
 
@@ -153,7 +151,7 @@ main() {
 
     while read -r path; do
         ((x=x%${thread})); ((x++==0)) && wait
-            scan_path ${protocol} ${url} ${path} ${x} &
+            scan_path ${protocol} ${url} ${path} &
     done < <(grep "" ${wordlist})
     wait
 
