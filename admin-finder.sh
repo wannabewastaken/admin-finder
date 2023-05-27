@@ -1,7 +1,7 @@
 #!/usr/bin/bash
+#
 # admin-finder: A script used to find the admin login page of a website.
 # https://github.com/wannabewastaken/admin-finder
-#-----------------------------------------------------------------------
 
 version=1.1
 
@@ -22,7 +22,9 @@ command -v curl &> /dev/null || { printf "%b\n" \
 command -v cut &> /dev/null || { printf "%b\n" \
      "${red}cut ${reset}not installed."; exit 1; }
 
-# Trap ctrl+c
+# Trap (ctrl + c)
+# \e[K   Erase from cursor position to end of line.
+# \r     is a carriage return which often means that the cursor should move to the leftmost column.
 trap "printf '\e[K\r[${red}EXIT${reset}] ctrl+c detected\n\n'; exit" INT
 
 banner() { printf "%b" "\
@@ -84,7 +86,7 @@ scan_robots() {
 scan_path() {
     if [[ $(curl -s "${1}${2}/${3}" -w "%{http_code}" -o /dev/null) -eq 200 ]]; then
         printf "%b" \
-        "\e[J |-- (${green}200${reset}) -> ${1}${2}/${3}\n"
+        "\e[K |-- (${green}200${reset}) -> ${1}${2}/${3}\n"
     else
         printf "%b" \
         "\e[K |-- (${yellow}${4}${reset}) -> ${1}${2}/${3}${reset}\r"
