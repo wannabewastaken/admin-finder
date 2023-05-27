@@ -59,7 +59,7 @@
 - [x] Web crawling
 - [x] Auto scanning robots.txt
 - [x] Checking potential EAR vulnerability
-- [x] Launch multiple proccess java on demand (bash threading version)
+- [x] Launch multiple process java on demand (bash multiprocess)
 
 ### How to install
 > This script required dependencies of `curl >= 7.88.1` and `cut >= 9.1` or higher.
