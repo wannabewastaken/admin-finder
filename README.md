@@ -1,5 +1,5 @@
 <h3 align=center>
-    	admin-finder
+    admin-finder
 </h3>
 
 <h6 align=center>
@@ -7,7 +7,7 @@
     ·
     <a href="https://github.com/wannabewastaken/admin-finder#features">Features</a>
     ·
-    <a href="https://github.com/wannabewastaken/admin-finder#download">Download</a>
+    <a href="https://github.com/wannabewastaken/admin-finder#install">Install</a>
 </h6>
 
 <p align=center>
@@ -61,5 +61,34 @@
 - [x] Checking potential EAR vulnerability
 - [x] Launch multiple proccess java on demand (bash threading version)
 
-### Download
-COMING SOON LMAO.
+### How to install
+> This script required dependencies of `curl >= 7.88.1` and `cut >= 9.1` or higher.
+<details>
+<summary>Termux</summary>
+	
+<span>Make sure you have already installed `git` if you don't, run the code above.</span>
+```bash
+> pkg update -y
+> pkg install git -y
+```
+
+<span>Let's cloning it into your computer.</span>
+```bash
+> git clone https://github.com/wannabewastaken/admin-finder
+```
+</details>
+
+<details>
+<summary>Kali-Linux</summary>
+	
+<span>Make sure you have already installed `git` if you don't, run the code above.</span>
+```bash
+> sudo apt update -y
+> sudo apt install git -y
+```
+
+<span>Let's cloning it into your computer.</span>
+```bash
+> git clone https://github.com/wannabewastaken/admin-finder
+```
+</details>
