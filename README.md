@@ -7,7 +7,7 @@
     ·
     <a href="https://github.com/wannabewastaken/admin-finder#features">Features</a>
     ·
-    <a href="https://github.com/wannabewastaken/admin-finder#install">Install</a>
+    <a href="https://github.com/wannabewastaken/admin-finder#how-to-install">Install</a>
 </h6>
 
 <p align=center>
