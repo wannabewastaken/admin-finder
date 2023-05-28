@@ -123,8 +123,8 @@ main() {
         shift
     done
 
-    if [[ "$url" =~ [^https?://].* ]]; then
-        url=$(printf $url | cut -d "/" -f 3)
+    if [[ "$url" =~ [^http[s]?:\/\/].* ]]; then
+        url=$(printf ${BASH_REMATCH} | cut -d "/" -f 3)
     fi
 
     if [[ -z "$thread" ]]; then
